@@ -1,40 +1,33 @@
-import React from 'react'
-import {
-  render,
-  fireEvent,
-  cleanup,
-} from '@testing-library/react'
+import React from "react"
+import { render, fireEvent, cleanup } from "@testing-library/react"
 
-import NewMessageForm from './'
+import NewMessageForm from "./"
 
-describe('<NewMessageForm />', () => {
+describe("<NewMessageForm />", () => {
   let getByTestId
   let sendHandler
 
   afterEach(cleanup)
 
-  describe('clicking the send button', () => {
+  describe("clicking the send button", () => {
     sendHandler = jest.fn()
     beforeEach(() => {
-      ({ getByTestId } = render(<NewMessageForm onSend={sendHandler} />))
+      ;({ getByTestId } = render(<NewMessageForm onSend={sendHandler} />))
 
-      fireEvent.change(
-        getByTestId('messageText'),
-        {
-          target: {
-            value: 'New message',
-          },
+      fireEvent.change(getByTestId("messageText"), {
+        target: {
+          value: "New message",
         },
-      )
+      })
 
-      fireEvent.click(getByTestId('sendButton'))
+      fireEvent.click(getByTestId("sendButton"))
     })
 
-    it('clears the text field', () => {
-      expect(getByTestId('messageText').value).toEqual('')
+    it("clears the text field", () => {
+      expect(getByTestId("messageText").value).toEqual("")
     })
-    it('calls the send handler', () => {
-      expect(sendHandler).toHaveBeenCalledWith('New message');
+    it("calls the send handler", () => {
+      expect(sendHandler).toHaveBeenCalledWith("New message")
     })
   })
 })

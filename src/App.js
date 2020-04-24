@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
-import './App.css'
+import "./App.css"
 
-import NewMessageForm from './components/NewMessageForm'
-import MessageList from './components/MessageList'
+import NewMessageForm from "./components/NewMessageForm"
+import MessageList from "./components/MessageList"
 
 const App = () => {
   const [messages, setMessages] = useState([])
-  const handleSend = newMessage => {
+  const handleSend = (newMessage) => {
     setMessages([newMessage, ...messages])
   }
 

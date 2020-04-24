@@ -1,8 +1,10 @@
-import React from 'react'
+import React from "react"
 
 const MessageList = ({ data }) => (
   <ul>
-   { data.map(message => <li key={message}>{message}</li>) }
+    {data.map((message) => (
+      <li key={message}>{message}</li>
+    ))}
   </ul>
 )
 

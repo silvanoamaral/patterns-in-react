@@ -6,7 +6,7 @@ export const debounceTime = (milliseconds, fn) => {
   }
 }
 
-const showMessage = () => console.log('Opa!') 
+const showMessage = () => console.log("Opa!")
 const operation2 = debounceTime(500, showMessage)
 
 operation2()
@@ -14,4 +14,3 @@ operation2()
 operation2()
 
 /* com essa função debounceTime a função operation2 vai executar apenas uma única vez */
-
