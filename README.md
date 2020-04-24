@@ -30,6 +30,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 # Pattern
 `prettier` is the JavaScript formatter we will run before commits.
+* Pre-commit Hook
+- This can re-format your files that are marked as "staged" via git add before you commit.
 
 `npm i react-snapshot` pre-renders a web app into static HTML
 ### `npm run postbuild`
