@@ -42,3 +42,14 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 `react-snapshot` pre-renders a web app into static HTML
 * `npm run postbuild`
+
+
+src/
+ |--- assets/   # Aqui ficará as imagens
+ |--- configs/  # Variáveis de configurações
+ |--- pages/    # As nossas páginas
+ |--- routes/   # Arquivo contendo as principais rotas do App
+ |--- services/ # Configuração de serviços utilizados
+ |--- styles/   # Estilos globais
+ |--- App.js    # Arquivo que conterá configurações principais do App
+ |--- index.js  # Ponto de entrada para execução do nosso App
