@@ -4,6 +4,7 @@ import "./App.css"
 
 import NewMessageForm from "./components/NewMessageForm"
 import MessageList from "./components/MessageList"
+import Pedidos from "./components/Pedidos"
 
 const App = () => {
   const [messages, setMessages] = useState([])
@@ -14,11 +15,16 @@ const App = () => {
 
   useEffect(() => {
     const getPedidos = async () => {
-      const result = await fetch("/api/pedido")
+      const result = await fetch("/api/pedidos")
       const data = await result.json()
+      console.log(data)
       setPedidos(data)
     }
     getPedidos()
+    /*
+    fazer esse projeto 
+     https://github.com/chaordic/frontend-challenger
+    */
   }, [])
 
   return (
@@ -38,6 +44,7 @@ const App = () => {
       </header>
       <NewMessageForm onSend={handleSend} />
       <MessageList data={messages} />
+      {pedidos && <Pedidos data={pedidos} />}
     </div>
   )
 }
