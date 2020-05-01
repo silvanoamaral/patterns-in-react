@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-import "./App.css"
+import "./App.scss"
 
 import NewMessageForm from "./components/NewMessageForm"
 import MessageList from "./components/MessageList"
@@ -9,6 +9,7 @@ import Pedidos from "./components/Pedidos"
 const App = () => {
   const [messages, setMessages] = useState([])
   const [pedidos, setPedidos] = useState([])
+
   const handleSend = (newMessage) => {
     setMessages([newMessage, ...messages])
   }
