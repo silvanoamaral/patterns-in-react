@@ -17,6 +17,10 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### Sonar
+Aplicando sonarqube<br />
+Precisa subir docker na maquina para acessar a o [sonarqube](http://192.168.99.100:9000/projects)
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
@@ -53,3 +57,5 @@ src/
  |--- styles/   # Estilos globais
  |--- App.js    # Arquivo que conterá configurações principais do App
  |--- index.js  # Ponto de entrada para execução do nosso App
+
+
