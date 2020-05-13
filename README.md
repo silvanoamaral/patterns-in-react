@@ -19,7 +19,9 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### Sonar
 Aplicando sonarqube<br />
-Precisa subir docker na maquina para acessar a o [sonarqube](http://192.168.99.100:9000/projects)
+Precisa subir docker na maquina para acessar o [sonarqube](http://192.168.99.100:9000/projects)
+* comando docker `docker run -d --name SonarQube -p 9000:9000 -p 9092:9092 sonarqube`
+[Ref](https://medium.com/@deeksha.sharma25/set-up-sonarqube-for-javascript-application-c0f605146998)
 
 ### `npm run build`
 
@@ -47,7 +49,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 `react-snapshot` pre-renders a web app into static HTML
 * `npm run postbuild`
 
-
+```bash
 src/
  |--- assets/   # Aqui ficará as imagens
  |--- configs/  # Variáveis de configurações
@@ -58,4 +60,4 @@ src/
  |--- App.js    # Arquivo que conterá configurações principais do App
  |--- index.js  # Ponto de entrada para execução do nosso App
 
-
+```
