@@ -16,7 +16,8 @@
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "server": "node app/server/index.js",
-    "start": "concurrently \"react-scripts start\" \"npm run server\"",
+    "start": "node app/server/index.js",
+    "start:dev": "concurrently \"react-scripts start\" \"npm run server\"",
     "build": "react-scripts build",
     "postbuild": "react-scripts build && react-snapshot",
     "test": "react-scripts test",
