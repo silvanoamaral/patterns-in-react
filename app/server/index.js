@@ -11,10 +11,8 @@ app.use("/api/entrega", obterEntrega)
 app.use("/api/bovespa", obterBovespa)
 
 if (process.env.NODE_ENV === "production") {
-  console.log("passou aqui")
-
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./build/index.html"))
+    res.sendFile(path.join(__dirname, "../../build/index.html"))
   })
 }
 
