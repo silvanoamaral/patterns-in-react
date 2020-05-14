@@ -4,10 +4,10 @@ const path = require("path")
 const app = express()
 const port = process.env.PORT || 4000
 
-const { obterPedido } = require("../modules/obterPedido")
+const { obterEntrega } = require("../modules/obterEntrega")
 const { obterBovespa } = require("../modules/obterBovespa")
 
-app.use("/api/pedidos", obterPedido)
+app.use("/api/entrega", obterEntrega)
 app.use("/api/bovespa", obterBovespa)
 
 if (process.env.NODE_ENV === "production") {
