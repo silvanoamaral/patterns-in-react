@@ -11,10 +11,10 @@ app.use("/api/entrega", obterEntrega)
 app.use("/api/bovespa", obterBovespa)
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("dist"))
+  console.log("passou aqui")
 
-  app.get("*", function (req, res) {
-    res.sendFile(path.resolve(__dirname, "dist", "index.html"))
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./build/index.html"))
   })
 }
 
